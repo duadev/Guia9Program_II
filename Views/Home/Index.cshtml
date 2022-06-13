@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Universidad Tecnologica de El Salvador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="card shadow p-4">
+
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card shadow p-2">
+
+                                <div class="text-center">
+                                    <img src="~/img/configure.svg" width="150" />
+                                    <div class="card-body">
+                                        <h5 class="display-5">Alumnos</h5>
+                                        <a href="~/Alumno/Index" class="btn btn-success mb-2">Mantenimiento</a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card shadow p-2">
+
+                                <div class="text-center">
+                                    <img src="~/img/configure.svg" width="150" />
+                                    <div class="card-body">
+                                        <h5 class="display-5">Docentes</h5>
+
+                                        <a href="~/Docente/Index" class="btn btn-success mb-2">Mantenimiento</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow p-2">
+
+                                <div class="text-center">
+                                    <img src="~/img/configure.svg" width="150" />
+                                    <div class="card-body">
+                                        <h5 class="display-5">Materias</h5>
+                                        <a href="~/Materia/Index" class="btn btn-success mb-2">Mantenimiento</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card shadow p-2">
+
+                                <div class="text-center">
+                                    <img src="~/img/configure.svg" width="150" />
+                                    <div class="card-body">
+                                        <h5 class="display-5">Notas</h5>
+                                        <a href="~/Nota/Index" class="btn btn-success mb-2">Mantenimiento</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

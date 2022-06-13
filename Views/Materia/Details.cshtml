@@ -1,0 +1,58 @@
+﻿@model Guia8Program_II.Models.Materia
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div class="row">
+        <div class="card shadow">
+
+            <div>
+                <h4>Materia</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.codMateria)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.codMateria)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.nombre)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.nombre)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.unidadValorativas)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.unidadValorativas)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.codMateria }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

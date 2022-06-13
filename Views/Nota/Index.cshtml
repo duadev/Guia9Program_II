@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Guia8Program_II.Models.Nota>
+
+@{
+    ViewBag.Title = "Notas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Estudiantes</title>
+</head>
+<body>
+
+    <div class="p-4">
+        <div class="container">
+            <div class="row">
+                <div class="card shadow">
+
+                    <div class="table-responsive">
+                        <div style="display:flex;">
+
+                            <div class="m-2">
+
+
+                                @Html.ActionLink("Regresar", "Index", "Home")
+
+
+                            </div>
+
+                            <div class="m-2">
+                                @Html.ActionLink("Agregar", "Create")
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="table-responsive">
+
+                            <table class="table table-sm table-hover">
+                                <tr>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.codMateria)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.carnetEstudiante)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.notaObtenida)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.estado)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.codMateria)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.carnetEstudiante)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.notaObtenida)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.estado)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.carnetEstudiante }) |
+                                            @Html.ActionLink("Details", "Details", new { id = item.carnetEstudiante }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.carnetEstudiante })
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

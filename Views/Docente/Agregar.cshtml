@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Agregar Docente</title>
+</head>
+<body>
+
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center g-0 min-vh-100">
+            <div class="col-lg-5 col-md-8 py-8 py-xl-0">
+
+                <div class="card shadow ">
+
+                    <div class="card-body">
+                        <div class="mb-4  pb-4">
+
+                            <h1 class="display-3 text-center next-app">Agregar</h1>
+
+                            <h1 class="mb-1 fw-bold next-app-subtitle">Docente</h1>
+
+                        </div>
+
+                        <form class="row needs-validation" method="post" action="/Docente/Agregar" novalidate>
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="fnombre">Nombre</label>
+                                <input type="text" class="form-control" id="fnombre" name="nombre" required>
+
+                                <div class="valid-feedback">
+                                    Nombre del docente ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese nombre del docente
+                                </div>
+                            </div>
+
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="lname">Apellido</label>
+                                <input type="text" id="lname" class="form-control" name="apellido" required>
+                                <div class="valid-feedback">
+                                    Apellido de docente ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese apellido del docente
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-label" for="fcodigoDocente">Codigo</label>
+                                <input type="number" id="fcodigoDocente" class="form-control" name="codigoDocente" required maxlength="8">
+
+                                <div class="valid-feedback">
+                                    Codigo de docente Ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese codigo de docente
+                                </div>
+                            </div>
+
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label">Sexo</label>
+                                <select name="especialidad" class="selectpicker form-control" data-width="100%">
+
+                                    <option value="Redes Informaticas">Redes Informaticas</option>
+                                    <option value="Programacion">Programacion</option>
+                                    <option value="Bases de datos">Bases de datos</option>
+
+                                </select>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="fespecialidad" class="form-label text-label">Titulo</label>
+                                <input type="text" id="fespecialidad" class="form-control" name="titulo" required>
+
+                                <div class="valid-feedback">
+                                    Titulo de docente ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese titulo de docente
+                                </div>
+                            </div>
+
+
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <button type="submit" class="btn btn-success" value="confirmar">Agregar</button>
+                                </div>
+                            </div>
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <a href="/Docente/Index" class="btn btn-primary">Regresar</a>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/validation.js"></script>
+</body>
+</html>

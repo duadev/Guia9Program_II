@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/theme.min.css" rel="stylesheet" />
+    <title>Editar Estudiante</title>
+</head>
+<body>
+
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center g-0 min-vh-100">
+            <div class="col-lg-5 col-md-8 py-8 py-xl-0">
+
+                <div class="card shadow ">
+
+                    <div class="card-body">
+                        <div class="mb-4  pb-4">
+
+                            <h1 class="display-3 text-center next-app">NextApp</h1>
+
+                            <h1 class="mb-1 fw-bold next-app-subtitle">Agregar</h1>
+
+                        </div>
+
+                        <form class="row needs-validation" method="post" action="/Alumno/Editar" novalidate>
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="fnombre">Nombre</label>
+                                <input type="text" class="form-control" id="fnombre" name="nombre"
+                                       value="@Model.Nombres" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="lname">Apellido</label>
+                                <input type="text" id="lname" class="form-control form-control-sm" name="apellido"
+                                       value="@Model.Apellidos" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="fcarnet">Carnet</label>
+                                <input type="text" class="form-control form-control-sm" id="fcarnet" placeholder="2517212020" name="carnet"
+                                       value="@Model.Carnet" readonly>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="direccion">Direccion</label>
+                                <input type="text" id="direccion" class="form-control form-control-sm" placeholder="Santa Tecla, La libertad" name="direccion"
+                                       value="@Model.Direccion" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="sexo" class="form-label text-label">Genero</label>
+                                <input type="text" id="sexo" class="form-control" name="sexo"
+                                       value="@Model.Sexo" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="ftelefono" class="form-label text-label">Telefono</label>
+                                <input type="text" id="direccion" class="form-control form-control-sm" placeholder="99886677" name="telefono"
+                                       value="@Model.Telefono" required maxlength="8">
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="fcorreo" class="form-label text-label">Correo</label>
+                                <input type="email" id="fcorreo" class="form-control form-control-sm" placeholder="user@dudev.com" name="correo"
+                                       value="@Model.Email" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <button type="submit" class="btn btn-primary" value="confirmar">Actualizar</button>
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <a href="/Alumno/Index" class="btn btn-success">Cancelar</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/validation.js"></script>
+</body>
+</html>

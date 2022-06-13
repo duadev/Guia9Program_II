@@ -1,0 +1,108 @@
+﻿@model Guia8Program_II.Models.Docente
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+ 
+    <title>Editar Docente</title>
+</head>
+<body>
+
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center g-0 min-vh-100">
+            <div class="col-lg-5 col-md-8 py-8 py-xl-0">
+
+                <div class="card shadow ">
+
+                    <div class="card-body">
+                        <div class="mb-4  pb-4">
+
+                            <h1 class="display-3 text-center next-app">Editar</h1>
+
+                            <h1 class="mb-1 fw-bold next-app-subtitle">Docente</h1>
+
+                        </div>
+
+                        <form class="row needs-validation" method="post" action="/Docente/Editar" novalidate>
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="fnombre">Nombre</label>
+                                <input type="text" class="form-control" id="fnombre" name="nombre" value="@Model.nombre" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="lname">Apellido</label>
+                                <input type="text" id="lname" class="form-control" name="apellido" value="@Model.apellido" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-label" for="fcodigoDocente">Codigo</label>
+                                <input type="text" id="fcodigoDocente" class="form-control" name="codigoDocente" value="@Model.codigoDocente" readonly>
+
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="especiaidad" class="form-label text-label">Especialidad</label>
+                                <input type="text" id="especialidad" class="form-control" name="especialidad"
+                                       value="@Model.especialidad" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="fespecialidad" class="form-label text-label">Titulo</label>
+                                <input type="text" id="fespecialidad" class="form-control" name="titulo" value="@Model.titulo" required>
+
+                                <div class="valid-feedback">
+
+                                </div>
+                                <div class="invalid-feedback">
+                                    Campo no puede ir vacio
+                                </div>
+                            </div>
+
+
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <button type="submit" class="btn btn-primary" value="confirmar">Actualizar</button>
+                                </div>
+                            </div>
+
+
+                            <div class="d-grid pb-4">
+                                <a href="/Docente/Index" class="btn btn-success" value="confirmar">Cancelar</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/validation.js"></script>
+</body>
+</html>

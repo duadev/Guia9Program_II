@@ -1,0 +1,141 @@
+﻿@model Guia8Program_II.Models.Alumnos
+
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/theme.min.css" rel="stylesheet" />
+    <title>Agregar Estudiantes</title>
+</head>
+<body>
+
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center g-0 min-vh-100">
+            <div class="col-lg-5 col-md-8 py-8 py-xl-0">
+
+                <div class="card shadow ">
+
+                    <div class="card-body">
+                        <div class="mb-4  pb-4">
+
+                            <h1 class="display-3 text-center next-app">Agregar</h1>
+
+                            <h1 class="mb-1 fw-bold next-app-subtitle">Alumno</h1>
+
+                        </div>
+
+                        <form class="row needs-validation" method="post" action="/Alumno/Agregar" novalidate>
+
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="fnombre">Nombre</label>
+                                <input type="text" class="form-control form-control-sm" id="fnombre" name="nombre" required>
+                                <div class="valid-feedback">
+                                    Nombre ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese nombre del alumno
+                                </div>
+                            </div>
+
+                            <div class="mb-3 col-12 col-md-6">
+                                <label class="form-label text-label" for="lname">Apellido</label>
+                                <input type="text" id="lname" class="form-control form-control-sm" name="apellido" required>
+
+                                <div class="valid-feedback">
+                                    Apellido ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese apellido del alumno
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="fcarnet">Carnet</label>
+                                <input type="text" class="form-control form-control-sm" id="fcarnet" name="carnet" maxlength="8" required>
+
+                                <div class="valid-feedback">
+                                    Codigo de Carnet ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese codigo de carnet del alumno
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="fdireccion">Direccion</label>
+                                <input type="text" class="form-control form-control-sm" id="fdireccion" name="direccion" required>
+
+                                <div class="valid-feedback">
+                                    Direccion ingresada
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese una direccion
+                                </div>
+                            </div>
+
+                            <div class="mb-3 col-12 col-md-4">
+                                <label class="form-label">Sexo</label>
+                                <select name="sexo" class="selectpicker form-control form-control-sm" data-width="100%">
+
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+
+                                </select>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="ftelefono" class="form-label text-label">Telefono</label>
+                                <input type="text" id="ftelefono" class="form-control form-control-sm" name="telefono" required="" maxlength="8">
+
+                                <div class="valid-feedback">
+                                    Numero de telefono ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese numero de telefono
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mb-4">
+                                <label for="fcorreo" class="form-label text-label">Correo</label>
+                                <input type="email" id="fcorreo" class="form-control form-control-sm"
+                                       placeholder="user@dudev.com" name="correo" required>
+
+                                <div class="valid-feedback">
+                                    Correo ingresado
+                                </div>
+                                <div class="invalid-feedback">
+                                    Ingrese su direccion de correo
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <button type="submit" class="btn btn-success" value="confirmar">Agregar</button>
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <div class="d-grid pb-4">
+                                    <a href="/Alumno/Index" class="btn btn-primary">Regresar</a>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿@model Guia8Program_II.Models.Nota
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div class="row">
+        <div class="card shadow">
+
+            <div class="row">
+                <div class="card shadow">
+
+                    <div>
+                        <h4>Nota</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.codMateria)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.codMateria)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.carnetEstudiante)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.carnetEstudiante)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.notaObtenida)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.notaObtenida)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.estado)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.estado)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new {  id = Model.carnetEstudiante }) |
+                        @Html.ActionLink("Back to List", "Index")
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

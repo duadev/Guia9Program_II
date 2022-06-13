@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Guia8Program_II.Models.Docente>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Docentes</title>
+</head>
+<body>
+
+    <div class="p-4">
+        <div class="container">
+            <div class="row">
+                <div class="card shadow">
+
+                    <div class="table-responsive">
+                        <div style="display:flex;">
+
+                            <div class="m-2">
+
+                                <a href="~/Home/Index" class="btn btn-warning btn-sm">
+
+                                    <img src="~/img/arrow-arc-left.svg" width="20" />
+                                    Regresar
+                                </a>
+                            </div>
+
+                            <div class="m-2">
+                                <a href="~/Docente/Agregar" class="btn btn-success btn-sm">
+                                    <img src="~/img/add.svg" width="20" />
+                                    Agregar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class=" table table-sm table-hover">
+
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">
+                                            Codigo
+                                        </th>
+                                        <th scope="col">
+                                            Nombre
+                                        </th>
+                                        <th scope="col">
+                                            Apellido
+                                        </th>
+                                        <th scope="col">
+                                            Especialidad
+                                        </th>
+                                        <th scope="col">
+                                            Titulo
+
+                                        <th scope="col">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                @foreach (var docentes in Model)
+                                {
+
+                                    <tbody>
+                                        <tr>
+
+                                            <td>
+                                                @docentes.codigoDocente
+                                            </td>
+                                            <td>
+                                                @docentes.nombre
+                                            </td>
+                                            <td>
+                                                @docentes.apellido
+                                            </td>
+                                            <td>
+                                                @docentes.especialidad
+
+                                            </td>
+                                            <td>
+                                                @docentes.titulo
+
+                                            </td>
+
+                                            <td>
+                                                <a href="/Docente/Eliminar?codigoDocente=@docentes.codigoDocente" class="btn btn-danger btn-sm">
+                                                    Eliminar
+                                                </a>
+
+                                            </td>
+                                            <td>
+                                                <a href="/Docente/Editar?codigoDocente=@docentes.codigoDocente" class="btn btn-warning btn-sm">
+                                                    Editar
+                                                </a>
+                                            </td>
+
+
+                                        </tr>
+
+                                    </tbody>
+
+
+
+                                }
+
+                            </table>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
